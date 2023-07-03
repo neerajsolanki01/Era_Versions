@@ -1,6 +1,8 @@
-import openai
-import pyttsx3
-import speech_recognition as sr
+import openai                                       # pip install openai
+import pyttsx3                                      # pip install pyttsx3
+import speech_recognition as sr                     # pip install SpeechRecognition
+#  From Archived: Unofficial Windows Binaries for Python Extension Packages " https://www.lfd.uci.edu/~gohlke/pythonlibs/ "
+#  pip install .\PyAudio-0.2.11-cp38-cp38-win_amd64.whl
 import webbrowser
 
 openai.api_key = "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"
