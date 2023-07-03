@@ -1,25 +1,30 @@
-import keyboard
-import speech_recognition as sr
-import pyttsx3
+import speech_recognition as sr # pip install SpeechRecognition
+#  From Archived: Unofficial Windows Binaries for Python Extension Packages " https://www.lfd.uci.edu/~gohlke/pythonlibs/ "
+#  pip install .\PyAudio-0.2.11-cp38-cp38-win_amd64.whl
+import pyttsx3                                          # pip install pyttsx3
 import random
 import datetime
-import wikipedia
+import wikipedia                                        # pip install wikipedia
 import webbrowser
-import pywhatkit
+import pywhatkit                                        # pip install pywhatkit
 import os
+import keyboard                                         # pip install keyboard
 from playsound import playsound
-import mss
-import cv2
-from requests import get
-import numpy as np
-import pyautogui
-import smtplib
-import pyjokes
-from pywikihow import search_wikihow
-import requests
-from bs4 import BeautifulSoup
-import pyscreenshot as ImageGrab
-from googletrans import Translator
+# py -m pip install --upgrade pip setuptools wheel
+# pip install playsound, # pip install torch, pip install torchaudio
+# import mss
+# import cv2
+from requests import get                                # pip install requests
+# import numpy as np
+import pyautogui                                        # pip install PyAutoGUI
+import smtplib                                          # pip install secure-smtplib
+import pyjokes                                          # pip install pyjokes
+from pywikihow import search_wikihow                    # pip install pywikihow
+import speedtest                                        # pip install speedtest-cli
+# import requests
+# from bs4 import BeautifulSoup
+# import pyscreenshot as ImageGrab
+from googletrans import Translator                      # pip install googletrans
 # from PyDictionary import PyDictionary as Dict
 
 Assistant = pyttsx3.init('sapi5')
@@ -109,8 +114,7 @@ def TaskExe():
 
     # Speedtest
     def SpeedTest():
-        import speedtest
-        speak("Cheaking speed...")
+        speak("Checking speed...")
         speed = speedtest.Speedtest()
         downloading = speed.download()
         correctDown = int(downloading/800000)
@@ -221,7 +225,7 @@ def TaskExe():
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
         server.starttls()
-        server.login('neerajsolanki271@gmail.com', 'kkji gyqo huwb iqez')
+        server.login('neerajsolanki271@gmail.com', 'k**i g**o *uw* ****')
         server.sendmail('neerajsolanki271@gmail.com', to, content)
         server.close()
 
@@ -475,7 +479,7 @@ def TaskExe():
 
 
         # YouTube Search
-        elif 'youtube search' in query:
+        elif 'youtube' in query:
             speak('What should i search on youtube.')
             cm = takecommand().lower()
             web = 'https://www.youtube.com/results?search_query=' + cm
@@ -490,19 +494,19 @@ def TaskExe():
 
         # Alarm Not Working
         elif 'alarm' in query:
-            speak('Tell Me the time')
+            speak('Enter the time')
             time = input('Enter the time : ')
             while True:
                 Time_Ac = datetime.datetime.now()
                 now = Time_Ac.strftime("%H:%M:%S")
                 if now == time:
                     speak('Your alarm is ringing.')
-                    playsound('Superman Rising.mp3')
+                    playsound('C:\\Users\\neera\\PycharmProjects\\ADatabase\\SupermanRising.mp3')
                 elif now > time:
                     break
                     speak('Alarm Closed')
 
-        # Not Working
+        # Not Working WhatsApp
         elif 'whatsapp' in query:
             whatsapp()
 
