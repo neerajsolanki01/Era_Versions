@@ -1,15 +1,18 @@
-import speech_recognition as sr
-import pyttsx3
-import pywhatkit
+import speech_recognition as sr  # pip install SpeechRecognition
+#  From Archived: Unofficial Windows Binaries for Python Extension Packages " https://www.lfd.uci.edu/~gohlke/pythonlibs/ "
+#  pip install .\PyAudio-0.2.11-cp38-cp38-win_amd64.whl
+
+import pyttsx3                    # pip install pyttsx3
+import pywhatkit                  # pip install pywhatkit
 import datetime
-import wikipedia
-import pyjokes
+import wikipedia                  # pip install wikipedia
+import pyjokes                    # pip install pyjokes
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[6].id)
-engine.setProperty('rate', 180)
+engine.setProperty('voice', voices[5].id)
+engine.setProperty('rate', 200)
 
 engine.say('Hey, I Am Your Personal Virtual Assistant.')
 engine.say('How Can I Help You.')
@@ -32,7 +35,7 @@ def takeCommand():
                 print(command)
     except:
         pass
-    return command
+    return command.lower()
 
 def run():
     command = takeCommand()
