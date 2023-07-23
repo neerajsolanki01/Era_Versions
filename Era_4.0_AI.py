@@ -5,7 +5,7 @@ import speech_recognition as sr                     # pip install SpeechRecognit
 #  pip install .\PyAudio-0.2.11-cp38-cp38-win_amd64.whl
 import webbrowser
 
-openai.api_key = "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"
+openai.api_key = "sk-ZQnk3ek7obf******jpdis****************OTfJj5zBb2rni"
 
 completion = openai.Completion()
 
