@@ -225,8 +225,8 @@ def TaskExe():
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
         server.starttls()
-        server.login('neerajsolanki271@gmail.com', 'k**i g**o *uw* ****')
-        server.sendmail('neerajsolanki271@gmail.com', to, content)
+        server.login('neerajsolanki@gmail.com', 'k**i g**o *uw* ****')
+        server.sendmail('neerajsolanki@gmail.com', to, content)
         server.close()
 
     # Whatsapp.
@@ -247,7 +247,7 @@ def TaskExe():
             hour = int(takecommand())
             speak('Minutes')
             min = int(takecommand())
-            pywhatkit.sendwhatmsg('+916260585621', msg, hour, min, 20)
+            pywhatkit.sendwhatmsg('+91***********1', msg, hour, min, 20)
             speak('Whats app message send.')
 
         elif 'ritesh' in name:
@@ -258,7 +258,7 @@ def TaskExe():
             hour = int(takecommand())
             speak('Minutes')
             min = int(takecommand())
-            pywhatkit.sendwhatmsg("+918817956908", msg, hour, min, 20)
+            pywhatkit.sendwhatmsg("+9************", msg, hour, min, 20)
             speak('Whats app message send.')
 
         else:
